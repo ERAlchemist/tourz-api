@@ -12,6 +12,11 @@
   "dependencies": {
     "@types/express": "^4.16.1",
     "@types/node": "^11.11.7",
-    "express": "^4.16.4"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/uuid": "^3.4.4"
   }
 }
