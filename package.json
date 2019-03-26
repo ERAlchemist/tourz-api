@@ -1,0 +1,17 @@
+{
+  "name": "l2code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sever.ts",
+  "scripts": {
+    "start-server": "tsc && node build/server.js",
+    "start": "nodemon -e ts -w ./ -x npm run start-server"
+  },
+  "author": "Eric Albertus",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "@types/node": "^11.11.7",
+    "express": "^4.16.4"
+  }
+}
