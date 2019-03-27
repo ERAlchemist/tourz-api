@@ -11,10 +11,10 @@ export const apiUpdateTour: RequestHandler = (req, res, next) => {
             location: req.body.location || originalTour.location,
             tourTitle: req.body.tourTitle || originalTour.tourTitle,
             tourCategory: req.body.tourCategory || originalTour.tourCategory,
-
             tourDescription: req.body.tourDescription || originalTour.tourDescription,
             price: req.body.price || originalTour.price,
-            currency: req.body.currency || originalTour.currency
+            currency: req.body.currency || originalTour.currency,
+            img: originalTour.img
         }
         DataStore.tours[tourIndex] = newTour;
         res.json({"status": "success", "message": "Element updated"});

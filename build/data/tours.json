@@ -6,7 +6,8 @@
         "tourCategory": "Sailing and Water Tours",
         "tourDescription": "Take a night cruise of the River Seine and see Paris illuminated for the night.",
         "price": 20,
-        "currency": "EUR"
+        "currency": "EUR",
+        "img": ["paris-img.jpg"]
     },
     {
         "id": "id-1",
@@ -15,6 +16,7 @@
         "tourCategory": "Sightseeing",
         "tourDescription": "Get to know New York City on a 4- or 8-hour walking tour with a private guide",
         "price": 190,
-        "currency": "USD"
+        "currency": "USD",
+        "img": ["ny-img.jpg"]
     }
 ]

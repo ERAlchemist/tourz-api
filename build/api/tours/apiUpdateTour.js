@@ -13,7 +13,8 @@ exports.apiUpdateTour = (req, res, next) => {
             tourCategory: req.body.tourCategory || originalTour.tourCategory,
             tourDescription: req.body.tourDescription || originalTour.tourDescription,
             price: req.body.price || originalTour.price,
-            currency: req.body.currency || originalTour.currency
+            currency: req.body.currency || originalTour.currency,
+            img: originalTour.img
         };
         data_1.DataStore.tours[tourIndex] = newTour;
         res.json({ "status": "success", "message": "Element updated" });
