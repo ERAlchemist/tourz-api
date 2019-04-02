@@ -2,6 +2,7 @@ import { DataStore } from "../../data/data";
 import { RequestHandler } from "express";
 import { TourDetail } from "../../model/shared/tourDetail";
 import { fileMapper } from "../general/static";
+import { APIError } from "../../model/shared/messages";
 
 export const apiGetTourDetail: RequestHandler = (req, res, next) => {
     const tourID = req.params.id;
@@ -12,6 +13,6 @@ export const apiGetTourDetail: RequestHandler = (req, res, next) => {
         res.json(new TourDetail(selectedTour, selectedReviews, imageURLs));
     }
     else {
-        res.json({"status": "failed", "message": "Element not found"});
+        res.json(APIError.errNotFound());
     }
 };

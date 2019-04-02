@@ -1,14 +1,14 @@
 import { RequestHandler } from "express";
-import multer  from "multer";
+import multer from "multer";
 import path from "path";
-import uuid from "uuid/v4"
+import uuid from "uuid/v4";
 
 export function getStaticHome(env: string) {
     switch(env) {
         case "development":
             return "http://localhost:8091/static/";
         case "production":
-        //.....CDN...
+        //...CDN...
     }
 }
 
@@ -17,17 +17,16 @@ export function fileMapper(env: string): (filename: string) => string {
 }
 
 export function getFileUploader(env: string): RequestHandler {
-    switch(env) {
+    switch(env) { 
         case "development":
             const fileID = uuid();
             const fileStore = multer.diskStorage({
-                destination: function(req, file, callback) {
+                destination: function (req, file, callback) {
                     callback(null, path.resolve("./", "public", "img"));
                 },
                 filename: function (req, file, callback) {
                     callback(null, fileID + path.extname(file.originalname));
                 }
-                    
             });
             return multer({storage: fileStore}).single("file");
         case "production":
