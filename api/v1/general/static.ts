@@ -6,7 +6,7 @@ import uuid from "uuid/v4";
 export function getStaticHome(env: string) {
     switch(env) {
         case "development":
-            return "http://localhost:8091/static/";
+            return "http://localhost:8091/v1/static/";
         case "production":
         //...CDN...
     }

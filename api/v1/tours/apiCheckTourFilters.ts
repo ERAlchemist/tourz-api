@@ -1,6 +1,6 @@
 import { RequestHandler } from "express";
-import { TourFilters } from "../../model/shared/tourFilters";
-import { APIError } from "../../model/shared/messages";
+import { TourFilters } from "../../../model/shared/tourFilters";
+import { APIError } from "../../../model/shared/messages";
 
 export const apiCheckTourFilters: RequestHandler = (req, res, next) => {
     const filters = new TourFilters(req.query);
