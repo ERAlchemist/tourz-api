@@ -8,7 +8,7 @@ import { apiUploadImage } from "./apiUploadImage";
 import { apiGetTours } from "./apiGetTours";
 import { jsonParser } from "../general/bodyParser";
 
-export const toursRouter = Router();
+export let toursRouter = Router();
 
 toursRouter.route("/")
     .get(apiCheckTourFilters, apiGetTours)

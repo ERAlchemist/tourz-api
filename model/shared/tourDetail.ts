@@ -10,8 +10,8 @@ export class TourDetail extends TourSummary {
     reviews: Review[]
     constructor(tourData: any, reviewData: any, tourImages: string[]) {
         super(tourData);
-        this.tourCategory = tourData.tourCategory;
-        this.tourDescription = tourData.tourDescription;
+        this.tourCategory = tourData.tour_category;
+        this.tourDescription = tourData.tour_description;
         this.price = tourData.price;
         this.currency = tourData.currency;
         this.img = tourImages;

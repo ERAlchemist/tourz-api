@@ -1,8 +1,8 @@
-import express from "express";
+import * as express from "express";
 import { routerV1 } from "./api/v1/v1";
-
 const app = express();
 
+require('dotenv').config();
 
 app.disable("x-powered-by");
 

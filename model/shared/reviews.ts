@@ -4,9 +4,9 @@ export class Review {
     reviewLongText: string
     stars: number
     constructor(data: any) {
-        this.tourID = data.tourID
-        this.reviewTitle = data.reviewTitle;
-        this.reviewLongText = data.reviewLongText;
+        this.tourID = data.tour_id
+        this.reviewTitle = data.review_title;
+        this.reviewLongText = data.review_long_text;
         this.stars = data.stars;
     }
 }

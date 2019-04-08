@@ -1,12 +1,13 @@
 import { RequestHandler } from "express";
-import path from "path"
+import * as path from "path";
+import { __root } from "../../../config";
 import { APIError } from "../../../model/shared/messages";
 
 export const apiDownloadImage: RequestHandler = (req, res, next) => {
-    const fileID = req.params.id;
-    res.download(path.resolve("./", "public", "img", fileID), err => {
+    const imageID = req.params.id;
+    res.download(path.join(__root, "public", "img", imageID), (err) => {
         if (err) {
-            next(new APIError("Download failed.", "Cannot download requested file.", 400));
+            next(APIError.errServerError());
         }
     });
 };
