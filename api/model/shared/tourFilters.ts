@@ -12,6 +12,6 @@ export class TourFilters {
             this.location ? `location = '${this.location}'` : 'TRUE',
             this.priceMin ? `price > ${this.priceMin}` : 'TRUE',
             this.priceMax ? `price < ${this.priceMax}` : 'TRUE'
-        ].join(" AND "); 
+        ].join(" AND ");
     }
 }

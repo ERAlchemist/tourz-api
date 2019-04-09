@@ -6,7 +6,7 @@ export class APIError extends Error {
                 public internalProperties?: any) {
         super();
         this.name = name;
-        this.message = message; 
+        this.message = message;
     }
     publicVersion() {
         return new PublicError(this);

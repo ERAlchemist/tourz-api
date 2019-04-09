@@ -15,7 +15,6 @@ export class TourDetail extends TourSummary {
         this.price = tourData.price;
         this.currency = tourData.currency;
         this.img = tourImages;
-        this.reviews = reviewData.map((item: any) => new Review(item)); 
-
+        this.reviews = reviewData.map((item: any) => new Review(item));
     }
 }
