@@ -6,7 +6,7 @@ export class APIError extends Error {
                 public internalProperties?: any) {
         super();
         this.name = name;
-        this.message = message; 
+        this.message = message;
     }
     publicVersion() {
         return new PublicError(this);
@@ -22,6 +22,9 @@ export class APIError extends Error {
     }
     static errServerError(properties?: any, internalProperties?: any) {
         return new APIError("Internal Server Error", "Request could not be carried out.", 500, properties, internalProperties);
+    }
+    static errUnauthorized(properties?: any, internalProperties?: any) {
+        return new APIError("Unauthorized", "Client Authorization Failed", 401, properties, internalProperties);
     }
 }
 

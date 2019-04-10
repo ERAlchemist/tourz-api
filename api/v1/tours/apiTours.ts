@@ -7,11 +7,12 @@ import { apiUpdateTour } from "./apiUpdateTour";
 import { apiUploadImage } from "./apiUploadImage";
 import { apiGetTours } from "./apiGetTours";
 import { jsonParser } from "../general/bodyParser";
+import { cacheCheck } from "../general/caching"; 
 
 export let toursRouter = Router();
 
 toursRouter.route("/")
-    .get(apiCheckTourFilters, apiGetTours)
+    .get(cacheCheck, apiCheckTourFilters, apiGetTours)
     .post(jsonParser, apiCreateTour);
 
 toursRouter.route("/:id")

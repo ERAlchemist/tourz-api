@@ -27,7 +27,7 @@ export class APIError extends Error {
 
 export class PublicError {
     name: string
-    message: string
+    message: string 
     status: number
     properties?: any
     constructor(err: APIError) {
